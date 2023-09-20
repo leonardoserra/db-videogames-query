@@ -50,4 +50,8 @@ FROM videogames
 WHERE YEAR(release_date) = 2020;
 
 --SELECT 10
-SELECT
+SELECT DISTINCT videogames.id, videogames.name
+FROM videogames
+INNER JOIN reviews
+ON videogames.id = reviews.videogame_id
+WHERE reviews.rating = 5;
