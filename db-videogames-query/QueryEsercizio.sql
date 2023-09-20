@@ -19,3 +19,8 @@ FROM players
 INNER JOIN reviews 
 ON players.id = reviews.player_id 
 WHERE player_id = 800;
+
+--SELECT 5
+SELECT COUNT(*) as tournaments_in_2015 
+FROM tournaments
+WHERE tournaments.year = 2015;
