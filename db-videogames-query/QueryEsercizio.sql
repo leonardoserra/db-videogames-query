@@ -106,12 +106,10 @@ INNER JOIN videogames
 ON device_videogame.videogame_id = videogames.id 
 GROUP BY devices.id;
 
---GROUP BY 6(da fixare)
-SELECT * ,AVG(reviews.rating)
-FROM videogames
-INNER JOIN reviews
-ON videogames.id = reviews.videogame_id 
-ORDER BY reviews.rating;
+--GROUP BY 6
+SELECT AVG(rating)
+FROM reviews
+GROUP BY videogame_id
 
 ------------------------------------------------------
 
