@@ -77,3 +77,8 @@ WHERE software_house_id = 1 AND YEAR(videogames.release_date) = 2018;
 SELECT COUNT(*) as numero_sh_in_country, software_houses.country
 FROM software_houses
 GROUP BY country;
+
+--GROUP BY 2
+SELECT videogame_id, COUNT(*)
+FROM reviews
+GROUP BY videogame_id; 
