@@ -24,3 +24,8 @@ WHERE player_id = 800;
 SELECT COUNT(*) as tournaments_in_2015 
 FROM tournaments
 WHERE tournaments.year = 2015;
+
+--SELECT 6
+SELECT *
+FROM awards
+WHERE description LIKE ('%facere%');
