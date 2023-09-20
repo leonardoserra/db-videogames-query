@@ -155,7 +155,20 @@ ON award_videogame.videogame_id = videogames.id
 INNER JOIN software_houses
 ON videogames.software_house_id = software_houses.id
 
-
+--JOIN 6
+SELECT DISTINCT videogames.name, categories.name, pegi_labels.name 
+FROM videogames
+INNER JOIN category_videogame
+ON videogames.id = category_videogame.videogame_id
+INNER JOIN categories
+ON category_videogame.category_id = categories.id
+INNER JOIN pegi_label_videogame
+ON videogames.id = pegi_label_videogame.videogame_id
+INNER JOIN pegi_labels
+ON pegi_label_videogame.pegi_label_id = pegi_labels.id
+INNER JOIN reviews
+ON videogames.id = reviews.videogame_id
+WHERE rating = 4 OR rating = 5;
 
 
 
