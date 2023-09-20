@@ -97,10 +97,13 @@ SELECT COUNT(videogames.id)
 FROM videogames
 GROUP BY YEAR(videogames.release_date);
 
-
-
 --GROUP BY 5
-
-
+SELECT devices.id as nome_device, COUNT(*) as numero_videogames
+FROM devices
+INNER JOIN device_videogame
+ON devices.id = device_videogame.device_id
+INNER JOIN videogames
+ON device_videogame.videogame_id = videogames.id 
+GROUP BY devices.id;
 
 --GROUP BY 6
