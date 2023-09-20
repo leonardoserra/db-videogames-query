@@ -82,3 +82,12 @@ GROUP BY country;
 SELECT videogame_id, COUNT(*)
 FROM reviews
 GROUP BY videogame_id; 
+
+--GROUP BY 3
+SELECT pegi_labels.id as pegi_label, COUNT(*) as videogames_per_pegi_label
+FROM pegi_labels
+INNER JOIN pegi_label_videogame
+ON pegi_labels.id = pegi_label_videogame.pegi_label_id
+INNER JOIN videogames
+ON pegi_label_videogame.videogame_id = videogames.id
+GROUP BY pegi_labels.id;
