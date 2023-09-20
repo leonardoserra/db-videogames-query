@@ -156,7 +156,7 @@ INNER JOIN software_houses
 ON videogames.software_house_id = software_houses.id
 
 --JOIN 6
-SELECT DISTINCT videogames.name, categories.name, pegi_labels.name 
+SELECT DISTINCT videogames.name as videogame_name, categories.name as category, pegi_labels.name as pegi_label 
 FROM videogames
 INNER JOIN category_videogame
 ON videogames.id = category_videogame.videogame_id
@@ -170,7 +170,18 @@ INNER JOIN reviews
 ON videogames.id = reviews.videogame_id
 WHERE rating = 4 OR rating = 5;
 
-
+--JOIN 7
+SELECT DISTINCT videogames.id, videogames.name as vg_name
+FROM videogames
+INNER JOIN tournament_videogame
+ON videogames.id = tournament_videogame.videogame_id
+INNER JOIN tournaments
+ON tournament_videogame.tournament_id = tournaments.id
+INNER JOIN player_tournament
+ON tournaments.id = player_tournament.tournament_id
+INNER JOIN players
+ON player_tournament.player_id = players.id
+WHERE players.name LIKE('S%');
 
 
 
