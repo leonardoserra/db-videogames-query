@@ -30,9 +30,14 @@ SELECT *
 FROM awards
 WHERE description LIKE ('%facere%');
 
---SELECT 7
+--SELECT 7 (da fixare)
 SELECT videogames.id
 FROM videogames
 FULL OUTER JOIN categories 
 ON videogames.id = categories.id
 WHERE videogames.id = 2 OR videogames.id = 6;
+
+--SELECT 8
+SELECT *
+FROM reviews
+WHERE rating >=2 AND rating <= 4;
