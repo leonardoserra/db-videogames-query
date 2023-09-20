@@ -69,3 +69,11 @@ FROM videogames
 INNER JOIN software_houses
 ON videogames.software_house_id = software_houses.id
 WHERE software_house_id = 1 AND YEAR(videogames.release_date) = 2018;
+
+
+-----------------------------------------------
+
+--GROUP BY 1
+SELECT COUNT(*) as numero_sh_in_country, software_houses.country
+FROM software_houses
+GROUP BY country;
