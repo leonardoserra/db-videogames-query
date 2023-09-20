@@ -138,6 +138,15 @@ ON videogames.id = category_videogame.videogame_id
 INNER JOIN categories
 ON category_videogame.category_id = categories.id;
 
+--JOIN 4
+SELECT DISTINCT software_houses.name, software_houses.city, software_houses.country
+FROM software_houses
+INNER JOIN videogames
+ON software_houses.id = videogames.software_house_id
+WHERE YEAR(videogames.release_date) >= 2020;
+
+
+
 
 
 
