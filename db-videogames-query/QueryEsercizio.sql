@@ -30,12 +30,14 @@ SELECT *
 FROM awards
 WHERE description LIKE ('%facere%');
 
---SELECT 7 (da fixare)
-SELECT videogames.id
+--SELECT 7 
+SELECT DISTINCT videogames.name
 FROM videogames
-FULL OUTER JOIN categories 
-ON videogames.id = categories.id
-WHERE videogames.id = 2 OR videogames.id = 6;
+INNER JOIN category_videogame cv
+ON videogames.id = cv.videogame_id
+INNER JOIN categories
+ON cv.category_id = categories.id
+WHERE categories.id = 2 OR categories.id = 6;
 
 --SELECT 8
 SELECT *
@@ -46,3 +48,6 @@ WHERE rating >=2 AND rating <= 4;
 SELECT *
 FROM videogames
 WHERE YEAR(release_date) = 2020;
+
+--SELECT 10
+SELECT
