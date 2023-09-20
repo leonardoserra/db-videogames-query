@@ -121,3 +121,11 @@ FROM players
 INNER JOIN reviews
 ON players.id = reviews.player_id;
 
+--JOIN 2
+SELECT DISTINCT videogames.id, videogames.name
+FROM videogames
+INNER JOIN tournament_videogame
+ON videogames.id = tournament_videogame.videogame_id
+INNER JOIN tournaments
+ON tournament_videogame.tournament_id = tournaments.id
+WHERE tournaments.year = 2016;
