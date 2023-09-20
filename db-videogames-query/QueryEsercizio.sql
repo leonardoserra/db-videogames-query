@@ -129,3 +129,30 @@ ON videogames.id = tournament_videogame.videogame_id
 INNER JOIN tournaments
 ON tournament_videogame.tournament_id = tournaments.id
 WHERE tournaments.year = 2016;
+
+--JOIN 3
+SELECT *
+FROM videogames
+INNER JOIN category_videogame
+ON videogames.id = category_videogame.videogame_id
+INNER JOIN categories
+ON category_videogame.category_id = categories.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
