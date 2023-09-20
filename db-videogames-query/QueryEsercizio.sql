@@ -55,3 +55,10 @@ FROM videogames
 INNER JOIN reviews
 ON videogames.id = reviews.videogame_id
 WHERE reviews.rating = 5;
+
+--SELECT Bonus 11
+SELECT COUNT(reviews.id) as numero_di_recensioni, AVG(reviews.rating) as media_recensioni
+FROM videogames
+INNER JOIN reviews
+ON videogames.id = reviews.videogame_id
+WHERE videogames.id = 412;
