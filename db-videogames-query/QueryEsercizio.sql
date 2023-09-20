@@ -195,6 +195,24 @@ ON award_videogame.award_id = awards.id
 WHERE award_videogame.year = 2018;
 
 
+--JOIN 9 (da fixare)
+SELECT DISTINCT players.id, awards.name, award_videogame.year, tournaments.year
+FROM players
+INNER JOIN player_tournament
+ON players.id = player_tournament.player_id
+INNER JOIN tournaments
+ON player_tournament.tournament_id = tournaments.id
+INNER JOIN tournament_videogame
+ON tournaments.id = tournament_videogame.videogame_id
+INNER JOIN videogames
+ON tournament_videogame.videogame_id = videogames.id
+INNER JOIN award_videogame
+ON videogames.id =  award_videogame.videogame_id
+INNER JOIN awards
+ON award_videogame.award_id = awards.id
+WHERE awards.name LIKE 'Gioco dell%anno'
+AND award_videogame.year = 2018
+AND tournaments.year = 2019;
 
 
 
