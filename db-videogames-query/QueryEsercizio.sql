@@ -183,6 +183,18 @@ INNER JOIN players
 ON player_tournament.player_id = players.id
 WHERE players.name LIKE('S%');
 
+--JOIN 8
+SELECT tournaments.city as city
+FROM tournaments
+INNER JOIN tournament_videogame
+ON tournaments.id = tournament_videogame.tournament_id
+INNER JOIN videogames
+ON tournament_videogame.videogame_id = videogames.id
+INNER JOIN award_videogame
+ON videogames.id = award_videogame.videogame_id
+INNER JOIN awards
+ON award_videogame.award_id = awards.id
+WHERE award_videogame.year = 2018;
 
 
 
