@@ -1,5 +1,6 @@
 # db-videogames-query
-**Query Select**
+**Query Select**  
+  
 1- Selezionare tutte le software house americane (3)
 
 2- Selezionare tutti i giocatori della città di 'Rogahnland' (2)
@@ -25,7 +26,8 @@
 11- Selezionare il numero e la media delle recensioni per il videogioco con ID = 412 (review number = 12, avg_rating = 3)
 
 12- Selezionare il numero di videogame che la software house con ID = 1 ha rilasciato nel 2018 (13)
-**Query GROUP BY:**
+**Query GROUP BY:**  
+  
 1- Contare quante software house ci sono per ogni paese (3)
 
 2- Contare quante recensioni ha ricevuto ogni videogioco (del videogioco vogliamo solo l'ID) (500)
@@ -38,7 +40,8 @@
 
 6- Ordinare i videogame in base alla media delle recensioni (del videogioco vogliamo solo l'ID) (500)
   
-**Query con JOIN:**
+**Query con JOIN:**  
+  
 1- Selezionare i dati di tutti giocatori che hanno scritto almeno una recensione, mostrandoli una sola volta (996)
 
 2- Sezionare tutti i videogame dei tornei tenuti nel 2016, mostrandoli una sola volta (226)
