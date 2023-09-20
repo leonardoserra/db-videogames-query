@@ -41,3 +41,8 @@ WHERE videogames.id = 2 OR videogames.id = 6;
 SELECT *
 FROM reviews
 WHERE rating >=2 AND rating <= 4;
+
+--SELECT 9
+SELECT *
+FROM videogames
+WHERE YEAR(release_date) = 2020;
