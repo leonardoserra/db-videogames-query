@@ -91,3 +91,16 @@ ON pegi_labels.id = pegi_label_videogame.pegi_label_id
 INNER JOIN videogames
 ON pegi_label_videogame.videogame_id = videogames.id
 GROUP BY pegi_labels.id;
+
+--GROUP BY 4
+SELECT COUNT(videogames.id)
+FROM videogames
+GROUP BY YEAR(videogames.release_date);
+
+
+
+--GROUP BY 5
+
+
+
+--GROUP BY 6
