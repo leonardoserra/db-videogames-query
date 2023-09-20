@@ -29,3 +29,10 @@ WHERE tournaments.year = 2015;
 SELECT *
 FROM awards
 WHERE description LIKE ('%facere%');
+
+--SELECT 7
+SELECT videogames.id
+FROM videogames
+FULL OUTER JOIN categories 
+ON videogames.id = categories.id
+WHERE videogames.id = 2 OR videogames.id = 6;
