@@ -62,3 +62,10 @@ FROM videogames
 INNER JOIN reviews
 ON videogames.id = reviews.videogame_id
 WHERE videogames.id = 412;
+
+--SELECT Bonus 12
+SELECT COUNT(videogames.id) as numero_di_videogames_rilasciati
+FROM videogames
+INNER JOIN software_houses
+ON videogames.software_house_id = software_houses.id
+WHERE software_house_id = 1 AND YEAR(videogames.release_date) = 2018;
