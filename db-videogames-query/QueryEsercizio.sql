@@ -145,7 +145,15 @@ INNER JOIN videogames
 ON software_houses.id = videogames.software_house_id
 WHERE YEAR(videogames.release_date) >= 2020;
 
-
+--JOIN 5
+SELECT *
+FROM awards
+INNER JOIN award_videogame
+ON awards.id = award_videogame.award_id
+INNER JOIN videogames
+ON award_videogame.videogame_id = videogames.id
+INNER JOIN software_houses
+ON videogames.software_house_id = software_houses.id
 
 
 
