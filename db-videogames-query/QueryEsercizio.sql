@@ -9,3 +9,6 @@ FROM players
 WHERE city = 'Rogahnland';
 
 --SELECT 3
+SELECT *
+FROM players
+WHERE name LIKE('%a');
